@@ -1,0 +1,91 @@
+﻿@*@model IEnumerable<WebApplication13.Models.ShoppingCartItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShoppingCartId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pie.name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShoppingCartId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pie.name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ShoppingCartItemId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ShoppingCartItemId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ShoppingCartItemId })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+
+@model WebApplication13.Models.ShoppingCartViewModel
+
+<h2>Your shopping cart</h2>
+<h4>Here are the delicious pies in your shopping cart.</h4>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Selected amount</th>
+            <th>Pie</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.ShoppingCart.Lines)
+        {
+            <tr>
+                <td class="text-center">@line.Amount</td>
+                <td class="text-left">@line.pie.name</td>
+                <td class="text-right">@line.pie.prce.ToString("c")</td>
+                <td class="text-right">
+                    @(line.Amount * line.pie.prce)
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">
+                @Model.ShoppingCartTotal
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+@*<div progress-value="33">
+    </div>*@
+
+
+
+<div class="text-center">
+    <a class="btn btn-primary" asp-controller="Order" asp-action="Checkout">Check out now!</a>
+</div>
