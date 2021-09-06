@@ -14,7 +14,7 @@ using System.Drawing;
 namespace WebApplication13.Controllers
 {
     
-    [Authorize]
+  //  [Authorize]
     public class piesController : Controller
     {
         private Database1Entities db = new Database1Entities();
