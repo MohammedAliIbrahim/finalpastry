@@ -6,7 +6,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Web;
 
-namespace WebApplication13.Models
+namespace SweetsShop.Models
 {
     
     

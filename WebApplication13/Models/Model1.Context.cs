@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebApplication13.Models
+namespace SweetsShop.Models
 {
     using System;
     using System.Data.Entity;

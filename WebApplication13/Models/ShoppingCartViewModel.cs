@@ -1,7 +1,7 @@
 ﻿//////this class is unused now . it was part of the previous attempts 
-//using WebApplication13.Models;
+//using SweetsShop.Models;
 
-//namespace WebApplication13.Models
+//namespace SweetsShop.Models
 //{
 //    public class ShoppingCartViewModel
 //    {

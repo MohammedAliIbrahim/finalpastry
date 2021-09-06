@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using WebApplication13.Models;
+using SweetsShop.Models;
 
-namespace WebApplication13.Controllers
+namespace SweetsShop.Controllers
 {
     [Authorize]
     

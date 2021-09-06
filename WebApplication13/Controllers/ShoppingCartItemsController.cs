@@ -6,9 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using WebApplication13.Models;
+using SweetsShop.Models;
 
-namespace WebApplication13.Controllers
+namespace SweetsShop.Controllers
 {
     public class ShoppingCartItemsController : Controller
     {

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using WebApplication13.Models;
+using SweetsShop.Models;
 using System.Web.Mvc;
 
 using System.Data;
 using System.Data.Entity;
 
 
-namespace WebApplication13.Controllers
+namespace SweetsShop.Controllers
 {
     
     public class HomeController : Controller

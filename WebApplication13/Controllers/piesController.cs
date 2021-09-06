@@ -6,12 +6,12 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using WebApplication13.Models;
+using SweetsShop.Models;
 using System.IO;
 using ImageTools;
 using System.Drawing;
 
-namespace WebApplication13.Controllers
+namespace SweetsShop.Controllers
 {
     
   //  [Authorize]
